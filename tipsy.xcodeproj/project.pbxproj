@@ -15,6 +15,8 @@
 		446C723F1BAFC52D0017FF47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446C723D1BAFC52D0017FF47 /* LaunchScreen.storyboard */; };
 		446C724A1BAFC52D0017FF47 /* tipsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446C72491BAFC52D0017FF47 /* tipsyTests.m */; };
 		446C72551BAFC52D0017FF47 /* tipsyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 446C72541BAFC52D0017FF47 /* tipsyUITests.m */; };
+		446C72651BAFC7550017FF47 /* TipsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446C72631BAFC7550017FF47 /* TipsyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		446C72661BAFC7550017FF47 /* TipsyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 446C72641BAFC7550017FF47 /* TipsyViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		446C72501BAFC52D0017FF47 /* tipsyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446C72541BAFC52D0017FF47 /* tipsyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipsyUITests.m; sourceTree = "<group>"; };
 		446C72561BAFC52D0017FF47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		446C72621BAFC7550017FF47 /* TipsyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipsyViewController.h; sourceTree = "<group>"; };
+		446C72631BAFC7550017FF47 /* TipsyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsyViewController.m; sourceTree = "<group>"; };
+		446C72641BAFC7550017FF47 /* TipsyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipsyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,9 @@
 				446C723D1BAFC52D0017FF47 /* LaunchScreen.storyboard */,
 				446C72401BAFC52D0017FF47 /* Info.plist */,
 				446C722F1BAFC52C0017FF47 /* Supporting Files */,
+				446C72621BAFC7550017FF47 /* TipsyViewController.h */,
+				446C72631BAFC7550017FF47 /* TipsyViewController.m */,
+				446C72641BAFC7550017FF47 /* TipsyViewController.xib */,
 			);
 			path = tipsy;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446C72661BAFC7550017FF47 /* TipsyViewController.xib in Resources */,
 				446C723F1BAFC52D0017FF47 /* LaunchScreen.storyboard in Resources */,
 				446C723C1BAFC52D0017FF47 /* Assets.xcassets in Resources */,
 				446C723A1BAFC52D0017FF47 /* Main.storyboard in Resources */,
@@ -270,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446C72651BAFC7550017FF47 /* TipsyViewController.m in Sources */,
 				446C72371BAFC52D0017FF47 /* ViewController.m in Sources */,
 				446C72341BAFC52C0017FF47 /* AppDelegate.m in Sources */,
 				446C72311BAFC52C0017FF47 /* main.m in Sources */,
@@ -414,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipsy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jj.tipsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tipsy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jj.tipsy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
