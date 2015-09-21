@@ -1,2 +1,2 @@
 # tipsy
-This is a tip calculator app for iOS.
+Tip calculator app for iOS.
