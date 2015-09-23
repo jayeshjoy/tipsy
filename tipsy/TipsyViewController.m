@@ -7,6 +7,7 @@
 //
 
 #import "TipsyViewController.h"
+#import "SettingsViewController.h"
 
 @interface TipsyViewController ()
 
@@ -18,21 +19,44 @@
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
+- (void)loadDefaultIndex;
+
 @end
 
 @implementation TipsyViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Tipsy";
-    [self updateValues];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
+    
     [self.billTextField becomeFirstResponder];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)loadDefaultIndex {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults objectForKey:@"optionIndex"]) {
+        [defaults setInteger:1 forKey:@"optionIndex"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    NSInteger index = [defaults integerForKey:@"optionIndex"];
+    self.tipControl.selectedSegmentIndex = index;
+    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"tipsy view will appear");
+    [self loadDefaultIndex];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"tipsy view did appear");
 }
 
 /*
@@ -61,5 +85,9 @@
 
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", totalAmount];
+}
+
+- (void)onSettingsButton {
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 @end
